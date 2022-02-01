@@ -15,6 +15,7 @@
 		A80A328227A931CD005F4CC3 /* EndpointEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A328127A931CD005F4CC3 /* EndpointEnum.swift */; };
 		A80A328427A93201005F4CC3 /* RequestProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A328327A93201005F4CC3 /* RequestProviding.swift */; };
 		A80A328627A93260005F4CC3 /* EndpointPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A328527A93260005F4CC3 /* EndpointPath.swift */; };
+		A80A328927A933A2005F4CC3 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A328827A933A2005F4CC3 /* Networking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		A80A328127A931CD005F4CC3 /* EndpointEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointEnum.swift; sourceTree = "<group>"; };
 		A80A328327A93201005F4CC3 /* RequestProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProviding.swift; sourceTree = "<group>"; };
 		A80A328527A93260005F4CC3 /* EndpointPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointPath.swift; sourceTree = "<group>"; };
+		A80A328827A933A2005F4CC3 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				A80A327D27A93160005F4CC3 /* Service */,
+				A80A328727A93345005F4CC3 /* UI */,
 				A80A326F27A930C0005F4CC3 /* SwiftAppApp.swift */,
 				A80A327127A930C0005F4CC3 /* ContentView.swift */,
 				A80A327327A930C1005F4CC3 /* Assets.xcassets */,
@@ -91,8 +94,16 @@
 				A80A328127A931CD005F4CC3 /* EndpointEnum.swift */,
 				A80A328327A93201005F4CC3 /* RequestProviding.swift */,
 				A80A328527A93260005F4CC3 /* EndpointPath.swift */,
+				A80A328827A933A2005F4CC3 /* Networking.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		A80A328727A93345005F4CC3 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +182,7 @@
 				A80A327027A930C0005F4CC3 /* SwiftAppApp.swift in Sources */,
 				A80A328027A9318B005F4CC3 /* ApiError.swift in Sources */,
 				A80A328227A931CD005F4CC3 /* EndpointEnum.swift in Sources */,
+				A80A328927A933A2005F4CC3 /* Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
