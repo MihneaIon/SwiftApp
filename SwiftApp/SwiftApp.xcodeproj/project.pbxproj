@@ -11,6 +11,10 @@
 		A80A327227A930C0005F4CC3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A327127A930C0005F4CC3 /* ContentView.swift */; };
 		A80A327427A930C1005F4CC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A80A327327A930C1005F4CC3 /* Assets.xcassets */; };
 		A80A327727A930C1005F4CC3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A80A327627A930C1005F4CC3 /* Preview Assets.xcassets */; };
+		A80A328027A9318B005F4CC3 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A327F27A9318B005F4CC3 /* ApiError.swift */; };
+		A80A328227A931CD005F4CC3 /* EndpointEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A328127A931CD005F4CC3 /* EndpointEnum.swift */; };
+		A80A328427A93201005F4CC3 /* RequestProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A328327A93201005F4CC3 /* RequestProviding.swift */; };
+		A80A328627A93260005F4CC3 /* EndpointPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A328527A93260005F4CC3 /* EndpointPath.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		A80A327127A930C0005F4CC3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A80A327327A930C1005F4CC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A80A327627A930C1005F4CC3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A80A327F27A9318B005F4CC3 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		A80A328127A931CD005F4CC3 /* EndpointEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointEnum.swift; sourceTree = "<group>"; };
+		A80A328327A93201005F4CC3 /* RequestProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProviding.swift; sourceTree = "<group>"; };
+		A80A328527A93260005F4CC3 /* EndpointPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointPath.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,7 @@
 		A80A326E27A930C0005F4CC3 /* SwiftApp */ = {
 			isa = PBXGroup;
 			children = (
+				A80A327D27A93160005F4CC3 /* Service */,
 				A80A326F27A930C0005F4CC3 /* SwiftAppApp.swift */,
 				A80A327127A930C0005F4CC3 /* ContentView.swift */,
 				A80A327327A930C1005F4CC3 /* Assets.xcassets */,
@@ -65,6 +74,25 @@
 				A80A327627A930C1005F4CC3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A80A327D27A93160005F4CC3 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				A80A327E27A9316A005F4CC3 /* Network */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		A80A327E27A9316A005F4CC3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A80A327F27A9318B005F4CC3 /* ApiError.swift */,
+				A80A328127A931CD005F4CC3 /* EndpointEnum.swift */,
+				A80A328327A93201005F4CC3 /* RequestProviding.swift */,
+				A80A328527A93260005F4CC3 /* EndpointPath.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +165,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A80A328427A93201005F4CC3 /* RequestProviding.swift in Sources */,
+				A80A328627A93260005F4CC3 /* EndpointPath.swift in Sources */,
 				A80A327227A930C0005F4CC3 /* ContentView.swift in Sources */,
 				A80A327027A930C0005F4CC3 /* SwiftAppApp.swift in Sources */,
+				A80A328027A9318B005F4CC3 /* ApiError.swift in Sources */,
+				A80A328227A931CD005F4CC3 /* EndpointEnum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
