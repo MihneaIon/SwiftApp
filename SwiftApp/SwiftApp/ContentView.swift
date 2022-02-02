@@ -10,10 +10,12 @@ import SwiftUI
 struct ContentView: View {
     
     @StateObject var homeView = HomeViewModel()
+    @StateObject var detailVeiwModel = DetailViewModel()
     
     var body: some View {
         HomeView()
             .environmentObject(homeView)
+            .environmentObject(detailVeiwModel)
     }
 }
 
