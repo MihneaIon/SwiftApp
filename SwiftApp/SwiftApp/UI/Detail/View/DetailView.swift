@@ -14,18 +14,18 @@ struct DetailView: View {
     
     var body: some View {
         VStack{
-            Text("\(ConstantName.type) : \(detailViewModel.type)")
+            Text("\(type) : \(detailViewModel.type)")
                 .foregroundColor(.backgroundColor)
-            Text("\(ConstantName.price): \(detailViewModel.price)")
+            Text("\(price): \(detailViewModel.price)")
                 .foregroundColor(.backgroundColor)
-            Text("\(ConstantName.participation): \(detailViewModel.paricipants)")
+            Text("\(participation): \(detailViewModel.paricipants)")
                 .foregroundColor(.backgroundColor)
         }
         .padding()
         .onAppear(perform: {
             detailViewModel.onAppear(homeData: homeViewModel)
         })
-        .navigationTitle(ConstantName.detailTitle)
+        .navigationTitle(detailTitle)
         .frame(
               minWidth: 0,
               maxWidth: .infinity,
@@ -34,7 +34,9 @@ struct DetailView: View {
               alignment: .center
             )
         .background(detailViewModel.backgroundColor)
-        
+        .onDisappear {
+            detailViewModel.stopAudioEffect(homeData: homeViewModel)
+        }
     }
 }
 

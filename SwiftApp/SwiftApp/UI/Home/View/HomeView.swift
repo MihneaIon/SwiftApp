@@ -14,10 +14,10 @@ struct HomeView: View {
     var body: some View {
         NavigationView{
             VStack{
-                Text(homeViewModel.bored?.activity ?? "Loading...")
+                Text(homeViewModel.bored?.activity ?? loadingMessage)
                     .padding()
                 NavigationLink(destination: DetailView(), label: {
-                    Text(ConstantName.buttonName)
+                    Text(buttonName)
                         .bold()
                         .contentShape(Capsule(style: .continuous))
                         .frame(width: 100, height: 30, alignment: .center)
@@ -27,15 +27,14 @@ struct HomeView: View {
                 Spacer()
                 Button {
                     homeViewModel.updateIsPressed();
-                    homeViewModel.onAppear()
+                    homeViewModel.takeActivities()
                 } label: {
-                    Text(ConstantName.refreshButton)
+                    Text(refreshButton)
                         .padding()
                 }
             }
             .onAppear {
-                homeViewModel.onAppear()
-                
+                homeViewModel.takeActivities()
             }
         }
     }

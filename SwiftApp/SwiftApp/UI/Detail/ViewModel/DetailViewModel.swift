@@ -68,6 +68,10 @@ class DetailViewModel: DataService {
         updateParticipants(homeData.bored!.participants)
         detailModel.backgroundColor = updateAmbient(type: homeData.bored!.type).0
         detailModel.sound = (updateAmbient(type: homeData.bored!.type).1).rawValue
-        playSound(sound: detailModel.sound, type: ConstantName.soundExtension)
+        playSound(sound: detailModel.sound, type: soundExtension)
+    }
+    
+    func stopAudioEffect(homeData: HomeViewModel) {
+        stopSound(sound: detailModel.sound, type: soundExtension)
     }
 }

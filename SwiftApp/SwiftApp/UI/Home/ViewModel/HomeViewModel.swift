@@ -10,7 +10,9 @@ import SwiftUI
 
 class HomeViewModel: DataService {
     
-    func onAppear(){
+    var homeModel = HomeModel()
+    
+    func takeActivities(){
         if !homeModel.isPressed {
             homeModel.togglePressed()
             takeBoredData()
