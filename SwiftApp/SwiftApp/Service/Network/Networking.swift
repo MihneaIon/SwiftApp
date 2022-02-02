@@ -8,7 +8,7 @@
 import Foundation
 
 protocol NetworkingProtocol {
-    func fetchData<T: Decodable>(_ requestProvider: RequestProviding, _ completion: @escaping (Result<T, ApiError>) -> Void)
+    func fetchData<T: Decodable>( _ requestProvider: RequestProviding, _ completion: @escaping (Result<T, ApiError>) -> Void)
 }
 
 internal class Networking: NetworkingProtocol {
@@ -17,7 +17,7 @@ internal class Networking: NetworkingProtocol {
     
     private weak var dataTask: URLSessionDataTask?
     
-    func fetchData<T>(_ requestProvider: RequestProviding, _ completion: @escaping (Result<T, ApiError>) -> Void) where T : Decodable {
+    func fetchData<T>( _ requestProvider: RequestProviding, _ completion: @escaping (Result<T, ApiError>) -> Void) where T : Decodable {
         
         let urlResponse = requestProvider.urlRequest
         
@@ -30,17 +30,16 @@ internal class Networking: NetworkingProtocol {
                 let decodedData = try JSONDecoder().decode(T.self, from: data)
                 completion(.success(decodedData))
             } catch {
-                if let httpResponse = response as? HTTPURLResponse {
-                    let apiError = ApiError(statusCode: httpResponse.statusCode)
-                    completion(.failure(apiError))
-                }
+                print("...", error)
+                let apiError = ApiError.parsing(error as? DecodingError)
+                completion(.failure(ApiError.parsing(error as? DecodingError)))
+                           }
+                           })
+                dataTask?.resume()
             }
-        })
-        dataTask?.resume()
-    }
-    
-    func cancelRequest() {
-        dataTask?.cancel()
-    }
-
-}
+            
+            func cancelRequest() {
+                dataTask?.cancel()
+            }
+            
+        }

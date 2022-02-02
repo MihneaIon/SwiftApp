@@ -16,6 +16,11 @@
 		A80A328427A93201005F4CC3 /* RequestProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A328327A93201005F4CC3 /* RequestProviding.swift */; };
 		A80A328627A93260005F4CC3 /* EndpointPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A328527A93260005F4CC3 /* EndpointPath.swift */; };
 		A80A328927A933A2005F4CC3 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A328827A933A2005F4CC3 /* Networking.swift */; };
+		A80A328B27A93879005F4CC3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A328A27A93879005F4CC3 /* HomeView.swift */; };
+		A80A329127A93D08005F4CC3 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A329027A93D08005F4CC3 /* HomeModel.swift */; };
+		A80A329327A93D56005F4CC3 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A329227A93D56005F4CC3 /* HomeViewModel.swift */; };
+		A80A329527A94018005F4CC3 /* BoredModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A329427A94018005F4CC3 /* BoredModel.swift */; };
+		A80A329727A95C89005F4CC3 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A329627A95C89005F4CC3 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +34,11 @@
 		A80A328327A93201005F4CC3 /* RequestProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProviding.swift; sourceTree = "<group>"; };
 		A80A328527A93260005F4CC3 /* EndpointPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointPath.swift; sourceTree = "<group>"; };
 		A80A328827A933A2005F4CC3 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		A80A328A27A93879005F4CC3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A80A329027A93D08005F4CC3 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		A80A329227A93D56005F4CC3 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		A80A329427A94018005F4CC3 /* BoredModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoredModel.swift; sourceTree = "<group>"; };
+		A80A329627A95C89005F4CC3 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				A80A327E27A9316A005F4CC3 /* Network */,
+				A80A329627A95C89005F4CC3 /* DataService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -102,8 +113,44 @@
 		A80A328727A93345005F4CC3 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				A80A328C27A93B74005F4CC3 /* HomeView */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		A80A328C27A93B74005F4CC3 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				A80A328E27A93B98005F4CC3 /* Model */,
+				A80A328D27A93B8F005F4CC3 /* View */,
+				A80A328F27A93BA4005F4CC3 /* ViewModel */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		A80A328D27A93B8F005F4CC3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A80A328A27A93879005F4CC3 /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A80A328E27A93B98005F4CC3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A80A329027A93D08005F4CC3 /* HomeModel.swift */,
+				A80A329427A94018005F4CC3 /* BoredModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A80A328F27A93BA4005F4CC3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A80A329227A93D56005F4CC3 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,10 +225,15 @@
 			files = (
 				A80A328427A93201005F4CC3 /* RequestProviding.swift in Sources */,
 				A80A328627A93260005F4CC3 /* EndpointPath.swift in Sources */,
+				A80A329127A93D08005F4CC3 /* HomeModel.swift in Sources */,
+				A80A329727A95C89005F4CC3 /* DataService.swift in Sources */,
+				A80A329327A93D56005F4CC3 /* HomeViewModel.swift in Sources */,
 				A80A327227A930C0005F4CC3 /* ContentView.swift in Sources */,
 				A80A327027A930C0005F4CC3 /* SwiftAppApp.swift in Sources */,
 				A80A328027A9318B005F4CC3 /* ApiError.swift in Sources */,
+				A80A328B27A93879005F4CC3 /* HomeView.swift in Sources */,
 				A80A328227A931CD005F4CC3 /* EndpointEnum.swift in Sources */,
+				A80A329527A94018005F4CC3 /* BoredModel.swift in Sources */,
 				A80A328927A933A2005F4CC3 /* Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,7 +378,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftAppy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -355,7 +407,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftAppy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
