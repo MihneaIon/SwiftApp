@@ -8,5 +8,5 @@
 import Foundation
 
 enum EndpointPath: String {
-    case acivity = "activity"
+    case acivity = "activity/"
 }

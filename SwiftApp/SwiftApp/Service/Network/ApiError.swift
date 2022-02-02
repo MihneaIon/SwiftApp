@@ -7,62 +7,34 @@
 
 import Foundation
 
-enum ApiStatusCode: Int {
-    case serviceUnavailable = 503
-    case unauthorized = 401
-    case internalServerError = 500
-    case requestTimeout = 408
-    case untrustedSSL = 495
-    case notFound = 404
-    case ok = 200
-}
-
-struct ApiError: Error {
-    var statusCode: Int
+enum ApiError: Error, CustomStringConvertible {
+    case badURL
+    case badResponse(statusCode: Int)
+    case url(URLError?)
+    case parsing(DecodingError?)
+    case unknown
     
-    var message: String {
-        switch status {
-        case .notFound:
-            return "Invalid Path"
-        case .serviceUnavailable:
-            return "Service Unavailable"
-        case .unauthorized:
-            return "Unauthorized"
-        case .internalServerError:
-            return "Internal Server Error"
-        case .requestTimeout:
-            return "Request timeout"
-        case .untrustedSSL:
-            return "Untrusted SSL"
-        case .ok:
-            return "Success"
+    var localizedDescription: String {
+        switch self {
+        case .badURL, .parsing, .unknown:
+            return "Sorry, something went wrong."
+        case .badResponse(_):
+            return "Sorry, the connection to our server failed."
+        case .url(let error):
+            return error?.localizedDescription ?? "Something went wrong."
         }
     }
     
-    var status: ApiStatusCode {
-        if statusCode == 404 {
-            return .notFound
+    var description: String {
+        switch self {
+        case .unknown: return "unknown error"
+        case .badURL: return "invalid URL"
+        case .url(let error):
+            return error?.localizedDescription ?? "url session error"
+        case .parsing(let error):
+            return "parsing error \(error?.localizedDescription ?? "")"
+        case .badResponse(statusCode: let statusCode):
+            return "bad response with status code \(statusCode)"
         }
-        if statusCode == 503 {
-            return .serviceUnavailable
-        }
-        if statusCode == 401 {
-            return .unauthorized
-        }
-        if statusCode == 500 {
-            return .internalServerError
-        }
-        if statusCode == 408 {
-            return .requestTimeout
-        }
-        if statusCode == 495 {
-            return .untrustedSSL
-        }
-        
-        return .ok
-    }
-    
-    init(statusCode: Int) {
-        self.statusCode = statusCode
     }
 }
