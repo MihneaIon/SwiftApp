@@ -11,8 +11,13 @@ import SwiftUI
 class HomeViewModel: DataService {
     
     func onAppear(){
-        takeBoredData()
-        home.activity = bored?.activity
+        if !homeModel.isPressed {
+            homeModel.togglePressed()
+            takeBoredData()
+        }
     }
     
+    func updateIsPressed(){
+        homeModel.togglePressed()
+    }
 }

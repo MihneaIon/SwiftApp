@@ -12,19 +12,31 @@ struct HomeView: View {
     @EnvironmentObject var homeViewModel: HomeViewModel
     
     var body: some View {
-        VStack{
-            Text(homeViewModel.bored?.activity ?? "Loading...")
-                .padding()
-            Spacer()
-            Button {
-                homeViewModel.onAppear()
-            } label: {
-                Text("Get new activities")
+        NavigationView{
+            VStack{
+                Text(homeViewModel.bored?.activity ?? "Loading...")
                     .padding()
+                NavigationLink(destination: DetailView(), label: {
+                    Text(ConstantName.buttonName)
+                        .bold()
+                        .contentShape(Capsule(style: .continuous))
+                        .frame(width: 100, height: 30, alignment: .center)
+                        .foregroundColor(.backgroundColor)
+                        .background(RoundedRectangle(cornerRadius: 4).stroke())
+                })
+                Spacer()
+                Button {
+                    homeViewModel.updateIsPressed();
+                    homeViewModel.onAppear()
+                } label: {
+                    Text(ConstantName.refreshButton)
+                        .padding()
+                }
             }
-        }
-        .onAppear {
-            homeViewModel.onAppear()
+            .onAppear {
+                homeViewModel.onAppear()
+                
+            }
         }
     }
 }
