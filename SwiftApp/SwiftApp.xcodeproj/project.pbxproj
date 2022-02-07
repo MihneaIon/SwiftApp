@@ -35,6 +35,11 @@
 		A80A329327A93D56005F4CC3 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A329227A93D56005F4CC3 /* HomeViewModel.swift */; };
 		A80A329527A94018005F4CC3 /* BoredModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A329427A94018005F4CC3 /* BoredModel.swift */; };
 		A80A329727A95C89005F4CC3 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A329627A95C89005F4CC3 /* DataService.swift */; };
+		A898EF3027ABC95900415868 /* DomainBored.swift in Sources */ = {isa = PBXBuildFile; fileRef = A898EF2F27ABC95900415868 /* DomainBored.swift */; };
+		A898EF3227ABCA3100415868 /* BoredRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A898EF3127ABCA3100415868 /* BoredRepository.swift */; };
+		A898EF3427ABD47F00415868 /* RepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A898EF3327ABD47F00415868 /* RepositoryImplementation.swift */; };
+		A898EF3627ABFB4500415868 /* RepositoryLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A898EF3527ABFB4500415868 /* RepositoryLayer.swift */; };
+		A898EF3827AC14D600415868 /* NewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A898EF3727AC14D600415868 /* NewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +83,11 @@
 		A80A329227A93D56005F4CC3 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		A80A329427A94018005F4CC3 /* BoredModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoredModel.swift; sourceTree = "<group>"; };
 		A80A329627A95C89005F4CC3 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		A898EF2F27ABC95900415868 /* DomainBored.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainBored.swift; sourceTree = "<group>"; };
+		A898EF3127ABCA3100415868 /* BoredRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoredRepository.swift; sourceTree = "<group>"; };
+		A898EF3327ABD47F00415868 /* RepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryImplementation.swift; sourceTree = "<group>"; };
+		A898EF3527ABFB4500415868 /* RepositoryLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryLayer.swift; sourceTree = "<group>"; };
+		A898EF3727AC14D600415868 /* NewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,8 +250,10 @@
 		A80A327D27A93160005F4CC3 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				A898EF2E27ABC93000415868 /* Repository */,
 				A80A327E27A9316A005F4CC3 /* Network */,
 				A80A329627A95C89005F4CC3 /* DataService.swift */,
+				A898EF3527ABFB4500415868 /* RepositoryLayer.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -298,8 +310,19 @@
 			isa = PBXGroup;
 			children = (
 				A80A329227A93D56005F4CC3 /* HomeViewModel.swift */,
+				A898EF3727AC14D600415868 /* NewViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A898EF2E27ABC93000415868 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				A898EF2F27ABC95900415868 /* DomainBored.swift */,
+				A898EF3127ABCA3100415868 /* BoredRepository.swift */,
+				A898EF3327ABD47F00415868 /* RepositoryImplementation.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,19 +442,24 @@
 				A80A328427A93201005F4CC3 /* RequestProviding.swift in Sources */,
 				A80504A627AAD04000DC8DCF /* Constants.swift in Sources */,
 				A80A328627A93260005F4CC3 /* EndpointPath.swift in Sources */,
+				A898EF3827AC14D600415868 /* NewViewModel.swift in Sources */,
 				A805048527AA950A00DC8DCF /* DetailModel.swift in Sources */,
 				A805048327AA91BB00DC8DCF /* DetailView.swift in Sources */,
+				A898EF3627ABFB4500415868 /* RepositoryLayer.swift in Sources */,
 				A805049627AAAB0400DC8DCF /* SoundEnum.swift in Sources */,
 				A80A329127A93D08005F4CC3 /* HomeModel.swift in Sources */,
 				A805048B27AAA18600DC8DCF /* Color+Ext.swift in Sources */,
+				A898EF3227ABCA3100415868 /* BoredRepository.swift in Sources */,
 				A80A329727A95C89005F4CC3 /* DataService.swift in Sources */,
 				A80A329327A93D56005F4CC3 /* HomeViewModel.swift in Sources */,
 				A80A327227A930C0005F4CC3 /* ContentView.swift in Sources */,
 				A805048E27AAA38E00DC8DCF /* PlaySounds.swift in Sources */,
 				A80A327027A930C0005F4CC3 /* SwiftAppApp.swift in Sources */,
 				A80A328027A9318B005F4CC3 /* ApiError.swift in Sources */,
+				A898EF3427ABD47F00415868 /* RepositoryImplementation.swift in Sources */,
 				A80A328B27A93879005F4CC3 /* HomeView.swift in Sources */,
 				A80A328227A931CD005F4CC3 /* EndpointEnum.swift in Sources */,
+				A898EF3027ABC95900415868 /* DomainBored.swift in Sources */,
 				A80A329527A94018005F4CC3 /* BoredModel.swift in Sources */,
 				A805048727AA956100DC8DCF /* DetailViewModel.swift in Sources */,
 				A80A328927A933A2005F4CC3 /* Networking.swift in Sources */,

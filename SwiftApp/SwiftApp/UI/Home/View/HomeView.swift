@@ -10,10 +10,12 @@ import SwiftUI
 struct HomeView: View {
     
     @EnvironmentObject var homeViewModel: HomeViewModel
+    @EnvironmentObject var newHomeViewModel: NewHomeViewModel
     
     var body: some View {
         NavigationView{
             VStack{
+                Text(newHomeViewModel.customData?.activity ?? "A")
                 Text(homeViewModel.bored?.activity ?? loadingMessage)
                     .padding()
                 NavigationLink(destination: DetailView(), label: {
@@ -34,7 +36,8 @@ struct HomeView: View {
                 }
             }
             .onAppear {
-                homeViewModel.takeActivities()
+//                homeViewModel.takeActivities()
+                newHomeViewModel.fetch()
             }
         }
     }
